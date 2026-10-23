@@ -1,0 +1,17 @@
+{
+  "site_name": "生成AI用語ドリル",
+  "tagline": "生成AIパスポート試験の用語を無料で覚える単語帳（2027年2月試験からの新シラバス対応）",
+  "description": "生成AIパスポート試験の用語（AIの基礎・生成AI・AIエージェント・リスクとガバナンス・実践と活用）を、カード・4択クイズ・書いて答える問題・章別ミニテスト・略語クイズで覚えられる無料の単語帳サイトです。2027年2月試験から適用の新しいシラバスに対応しています。",
+  "base_url": "https://genai.yogo-drill.com",
+  "sisters": [
+    {"name": "ITパスポート用語ドリル", "url": "https://ip.yogo-drill.com", "desc": "ITパスポート試験の用語"},
+    {"name": "FE用語ドリル", "url": "https://fe.yogo-drill.com", "desc": "基本情報技術者試験の用語とプログラムの問題"}
+  ],
+  "operator": "Yuki-fe",
+  "contact": "https://forms.gle/s4yB1xMbcoRqZps2A",
+  "established": "2026-10-15",
+  "google_analytics_id": "",
+  "adsense_client": "",
+  "amazon_associate": false,
+  "affiliate_html": ""
+}
