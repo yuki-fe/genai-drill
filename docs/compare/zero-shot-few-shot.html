@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zero-ShotとFew-Shotプロンプティングの違いを表で比較｜生成AIパスポート試験｜生成AI用語ドリル</title>
+<meta name="description" content="Zero-Shot は例を示さずに指示だけで答えさせる方法、Few-Shot はいくつかの例（入力と出力の見本）を示してから答えさせる方法です。">
+<link rel="canonical" href="https://genai.yogo-drill.com/compare/zero-shot-few-shot.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zero-ShotとFew-Shotプロンプティングの違いを表で比較｜生成AIパスポート試験｜生成AI用語ドリル">
+<meta property="og:description" content="Zero-Shot は例を示さずに指示だけで答えさせる方法、Few-Shot はいくつかの例（入力と出力の見本）を示してから答えさせる方法です。">
+<meta property="og:url" content="https://genai.yogo-drill.com/compare/zero-shot-few-shot.html">
+<meta property="og:site_name" content="生成AI用語ドリル">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/layout.css">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CXLPPG7FZQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CXLPPG7FZQ');</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://genai.yogo-drill.com/"}, {"@type": "ListItem", "position": 2, "name": "似た用語の違い", "item": "https://genai.yogo-drill.com/compare/index.html"}, {"@type": "ListItem", "position": 3, "name": "Zero-ShotとFew-Shotプロンプティングの違い", "item": "https://genai.yogo-drill.com/compare/zero-shot-few-shot.html"}]}</script>
+</head>
+<body class="" data-root="../">
+<a class="skip" href="#content">本文へ移動</a>
+<header class="site-head">
+  <div class="site-head-in">
+    <a class="brand" href="../index.html"><img src="../favicon.svg" alt="" width="28" height="28">生成AI用語ドリル</a>
+    <nav class="site-nav" aria-label="サイト内">
+      <a href="../index.html">用語ドリル</a><a href="../test.html">ミニテスト</a><a href="../abbr.html">略語</a><a href="../terms/index.html">用語一覧</a><a href="../typing.html">タイピング</a><a href="../about.html">このサイトについて</a>
+    </nav>
+  </div>
+</header>
+<div id="content"></div>
+
+<main class="prose">
+  <nav class="crumbs" aria-label="パンくずリスト"><a href="../index.html">ホーム</a><span>›</span><a href="index.html">似た用語の違い</a><span>›</span><span>Zero-ShotとFew-Shotプロンプティングの違い</span></nav>
+  <p class="eyebrow">似た用語を比べる</p>
+  <h1>Zero-ShotとFew-Shotプロンプティングの違い</h1>
+  <p class="lead">Zero-Shot は例を示さずに指示だけで答えさせる方法、Few-Shot はいくつかの例（入力と出力の見本）を示してから答えさせる方法です。</p>
+  <h2>表で比べる</h2>
+  <div class="table-scroll"><table class="cmp-table"><thead><tr><th scope="col">観点</th><th scope="col">Zero-Shotプロンプティング</th><th scope="col">Few-Shotプロンプティング</th></tr></thead><tbody><tr><th scope="row">例を示すか</th><td>示さない。指示だけ</td><td>いくつかの例（入力と出力の見本）を示す</td></tr><tr><th scope="row">よい点</th><td>プロンプトが短く、すぐ使える</td><td>出力の形や判断の基準をそろえやすい</td></tr><tr><th scope="row">気をつける点</th><td>期待した形と違う答えになることがある</td><td>示した例にかたよった答えになることがある。プロンプトが長くなる</td></tr><tr><th scope="row">プロンプトの例</th><td>「次の口コミが良い評価か悪い評価かを答えて」</td><td>「『とても満足』→良い、『二度と買わない』→悪い。では『期待以上だった』→？」</td></tr></tbody></table></div>
+  <h2>見分けるポイント</h2>
+  <ul><li>例が0個なら Zero-Shot、いくつかなら Few-Shot（1つだけなら One-Shot と呼ぶ）</li><li>どちらもモデルを学習し直さない。プロンプトの中の例や説明から作業のしかたをつかむことを In-Context Learning という</li><li>出力の形をそろえたいときは Few-Shot が向く</li></ul>
+  <h2>試験での出され方</h2>
+  <p>プロンプトの例を見て、どの手法かを選ぶ問題が考えられます。例（見本）がいくつ入っているかを数えましょう。</p>
+  <h2>それぞれの用語</h2>
+  <ul class="term-list"><li><a href="../terms/0183.html">Zero-Shotプロンプティング</a><p>例を示さずに、指示だけで答えさせる方法。</p></li><li><a href="../terms/0184.html">Few-Shotプロンプティング</a><p>いくつかの例（入力と出力の見本）を示してから答えさせる方法。出力の形をそろえやすい。</p></li></ul>
+  <div class="cta-row">
+    <a class="btn primary" href="../index.html#quiz"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="14" height="14" rx="2"/><path d="M7 2h12a2 2 0 0 1 2 2v12"/></svg>4択クイズで確かめる</a>
+    <a class="btn" href="../index.html#card">カードで練習</a>
+  </div>
+  
+  <h2>ほかの比べる用語</h2>
+  <ul class="b-links inline"><li><a href="ai-ml-dl.html">AI・機械学習・ディープラーニングの違い</a></li><li><a href="learning-types.html">教師あり学習・教師なし学習・強化学習の違い</a></li><li><a href="classification-regression.html">分類と回帰の違い</a></li><li><a href="transfer-finetuning.html">転移学習とファインチューニングの違い</a></li><li><a href="cnn-rnn-transformer.html">CNN・RNN・Transformerの違い</a></li><li><a href="gan-vae-diffusion.html">GAN・VAE・拡散モデルの違い</a></li><li><a href="rag-finetuning.html">RAGとファインチューニングの違い</a></li><li><a href="temperature-top-p.html">TemperatureとTop-pの違い</a></li><li><a href="workflow-autonomous-agent.html">ワークフロー型エージェントと自律型エージェントの違い</a></li><li><a href="function-calling-mcp-a2a.html">Function Calling・MCP・A2Aの違い</a></li><li><a href="anonymized-pseudonymized.html">匿名加工情報と仮名加工情報の違い</a></li><li><a href="moral-rights-copyright.html">著作者人格権と複製権・翻案権の違い</a></li><li><a href="echo-chamber-filter-bubble.html">エコーチェンバーとフィルターバブルの違い</a></li><li><a href="shadow-ai-shadow-it.html">シャドーAIとシャドーITの違い</a></li></ul>
+</main>
+
+<footer class="site-foot">
+  <nav aria-label="フッター">
+    <a href="https://yogo-drill.com/">用語ドリル（ほかの資格のサイト）</a>
+    <a href="../terms/index.html">用語一覧</a>
+    <a href="../about.html">運営者情報</a>
+    <a href="../privacy.html">プライバシーポリシー・免責事項</a>
+  </nav>
+  <p>姉妹サイト: <a href="https://ip.yogo-drill.com/">ITパスポート用語ドリル</a>／<a href="https://fe.yogo-drill.com/">FE用語ドリル</a></p>
+  <p>生成AIパスポートは、一般社団法人生成AI活用普及協会（GUGA）が実施する試験です。当サイトは、試験の実施団体とは関係のない個人の学習サイトです。</p>
+  <p>© 2026 Yuki-fe</p>
+</footer>
+
+</body>
+</html>

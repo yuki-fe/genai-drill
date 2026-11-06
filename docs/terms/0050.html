@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Transformerとは？意味と覚え方｜生成AIパスポート試験の用語｜生成AI用語ドリル</title>
-<meta name="description" content="Transformer（生成AI・Transformerと基盤モデル）: Attention を中心にした、文章などを処理するモデルの仕組み。並列に計算でき、遠く離れた言葉の関係（長距離依存）もとらえやすい。今の LLM の土台。">
+<meta name="description" content="Transformer（生成AI・Transformerと基盤モデル）: Attention を中心にした、文章などを処理するモデルの仕組み。並列に計算でき、遠く離れた言葉の関係（長距離依存）もとらえやすい。今の LLM の土台。【覚え方…">
 <link rel="canonical" href="https://genai.yogo-drill.com/terms/0050.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Transformerとは？意味と覚え方｜生成AIパスポート試験の用語｜生成AI用語ドリル">
-<meta property="og:description" content="Transformer（生成AI・Transformerと基盤モデル）: Attention を中心にした、文章などを処理するモデルの仕組み。並列に計算でき、遠く離れた言葉の関係（長距離依存）もとらえやすい。今の LLM の土台。">
+<meta property="og:description" content="Transformer（生成AI・Transformerと基盤モデル）: Attention を中心にした、文章などを処理するモデルの仕組み。並列に計算でき、遠く離れた言葉の関係（長距離依存）もとらえやすい。今の LLM の土台。【覚え方…">
 <meta property="og:url" content="https://genai.yogo-drill.com/terms/0050.html">
 <meta property="og:site_name" content="生成AI用語ドリル">
 <meta name="twitter:card" content="summary">
@@ -48,6 +48,7 @@
         <a class="btn primary" href="../index.html#card"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="14" height="14" rx="2"/><path d="M7 2h12a2 2 0 0 1 2 2v12"/></svg>カードで練習</a>
         <a class="btn" href="../index.html#type">書いて答える問題に挑戦</a>
       </div>
+      <section class="detail"><h2>覚え方</h2><p>文章を前から1語ずつ読むのではなく、全体を一度に見て「どの言葉がどの言葉と関係するか」を計算します。2017年の論文「Attention Is All You Need」で発表され、今の LLM の土台になりました。</p></section><section class="detail"><h2>試験での出され方</h2><p>Attention（Self-Attention）を中心にした仕組みであること、並列に計算できること、遠く離れた言葉の関係もとらえやすいことが問われやすいところです。RNN との違いとあわせて覚えましょう。</p></section><section class="detail"><h2>似た用語との違い</h2><dl class="diff-list"><dt><a href="0033.html">RNN（再帰型ニューラルネットワーク）</a>との違い</dt><dd>RNN は、前から順番に計算するため、並列に計算しにくい。Transformer は、まとめて並列に計算できる。</dd><dt><a href="0051.html">Self-Attention（自己注意機構）</a>との違い</dt><dd>Self-Attention は、Transformer の中で使われる部品（同じ文章の単語どうしの関係を計算する仕組み）。Transformer はそれを使ったモデル全体の仕組み。</dd></dl></section>
       
   <section class="mini-quiz" data-answer="3" data-term="潜在拡散モデル（Latent Diffusion Model）" data-href="0054.html">
     <h2>確認問題</h2>
@@ -71,6 +72,7 @@
         <h2>同じ分野の用語</h2>
         <ul class="related"><li><a href="0051.html">Self-Attention（自己注意機構）</a><p>文章の中の各単語が、同じ文章のほかの単語とどれだけ関係するかを計算する仕組み。Query・Key・Value の3つの値を使う。</p></li><li><a href="0052.html">自然言語処理</a><p>人が使う言葉（自然言語）を、コンピュータで理解・生成する技術。翻訳・要約・質問への回答など。</p></li><li><a href="0053.html">拡散モデル（Diffusion Model）</a><p>データに少しずつノイズを加える拡散過程と、ノイズを取り除いて元に戻す逆拡散過程を学ぶ生成モデル。画像生成でよく使われる。</p></li><li><a href="0054.html">潜在拡散モデル（Latent Diffusion Model）</a><p>画像そのものではなく、縮めた潜在空間の上で拡散モデルを動かす方法。少ない計算で高い品質の画像を作れる。</p></li><li><a href="0055.html">基盤モデル（Foundation Model）</a><p>大量のデータで事前学習した、いろいろな用途に使い回せる大きなモデル。追加の学習や指示で、特定の作業に合わせられる。</p></li><li><a href="0056.html">マルチモーダルモデル</a><p>文章・画像・音声など、複数の種類（モダリティ）のデータをまとめて扱えるモデル。</p></li></ul>
       </section>
+      <section class="side-card"><h2>比べて覚える</h2><ul class="b-links"><li><a href="../compare/cnn-rnn-transformer.html">CNN・RNN・Transformerの違い</a></li></ul></section>
     </aside>
   </div>
 </div>

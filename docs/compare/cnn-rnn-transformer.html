@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CNN・RNN・Transformerの違いを表で比較｜生成AIパスポート試験｜生成AI用語ドリル</title>
+<meta name="description" content="CNN は画像、RNN は文章や音声のような順番のあるデータを扱うのが得意なネットワークです。Transformer は Attention を中心にした仕組みで、並列に計算でき、今の LLM の土台になっています。">
+<link rel="canonical" href="https://genai.yogo-drill.com/compare/cnn-rnn-transformer.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CNN・RNN・Transformerの違いを表で比較｜生成AIパスポート試験｜生成AI用語ドリル">
+<meta property="og:description" content="CNN は画像、RNN は文章や音声のような順番のあるデータを扱うのが得意なネットワークです。Transformer は Attention を中心にした仕組みで、並列に計算でき、今の LLM の土台になっています。">
+<meta property="og:url" content="https://genai.yogo-drill.com/compare/cnn-rnn-transformer.html">
+<meta property="og:site_name" content="生成AI用語ドリル">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/layout.css">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CXLPPG7FZQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CXLPPG7FZQ');</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://genai.yogo-drill.com/"}, {"@type": "ListItem", "position": 2, "name": "似た用語の違い", "item": "https://genai.yogo-drill.com/compare/index.html"}, {"@type": "ListItem", "position": 3, "name": "CNN・RNN・Transformerの違い", "item": "https://genai.yogo-drill.com/compare/cnn-rnn-transformer.html"}]}</script>
+</head>
+<body class="" data-root="../">
+<a class="skip" href="#content">本文へ移動</a>
+<header class="site-head">
+  <div class="site-head-in">
+    <a class="brand" href="../index.html"><img src="../favicon.svg" alt="" width="28" height="28">生成AI用語ドリル</a>
+    <nav class="site-nav" aria-label="サイト内">
+      <a href="../index.html">用語ドリル</a><a href="../test.html">ミニテスト</a><a href="../abbr.html">略語</a><a href="../terms/index.html">用語一覧</a><a href="../typing.html">タイピング</a><a href="../about.html">このサイトについて</a>
+    </nav>
+  </div>
+</header>
+<div id="content"></div>
+
+<main class="prose">
+  <nav class="crumbs" aria-label="パンくずリスト"><a href="../index.html">ホーム</a><span>›</span><a href="index.html">似た用語の違い</a><span>›</span><span>CNN・RNN・Transformerの違い</span></nav>
+  <p class="eyebrow">似た用語を比べる</p>
+  <h1>CNN・RNN・Transformerの違い</h1>
+  <p class="lead">CNN は画像、RNN は文章や音声のような順番のあるデータを扱うのが得意なネットワークです。Transformer は Attention を中心にした仕組みで、並列に計算でき、今の LLM の土台になっています。</p>
+  <h2>表で比べる</h2>
+  <div class="table-scroll"><table class="cmp-table"><thead><tr><th scope="col">観点</th><th scope="col">CNN</th><th scope="col">RNN</th><th scope="col">Transformer</th></tr></thead><tbody><tr><th scope="row">得意なデータ</th><td>画像</td><td>文章・音声などの順番のあるデータ</td><td>文章など（画像などにも使われる）</td></tr><tr><th scope="row">仕組みの中心</th><td>畳み込み（小さな範囲ごとに特徴をとらえる）</td><td>前の時点の情報を次に引き継ぐ</td><td>Attention（入力のどこに注目するかを重み付けする）</td></tr><tr><th scope="row">計算のしかた</th><td>範囲ごとの計算をまとめて行える</td><td>1つずつ順番に計算する</td><td>まとめて並列に計算できる</td></tr><tr><th scope="row">長い文章の扱い</th><td>（主に画像に使う）</td><td>遠く離れた情報を覚えておきにくい（LSTM で改良）</td><td>遠く離れた言葉の関係もとらえやすい</td></tr></tbody></table></div>
+  <h2>見分けるポイント</h2>
+  <ul><li>「畳み込み」「画像の認識」が出てきたら CNN</li><li>「前の時点の情報を引き継ぐ」「シーケンスデータ」が出てきたら RNN。長い順番のデータでも覚えておけるように改良したのが LSTM</li><li>「Attention」「並列に計算」「LLM の土台」が出てきたら Transformer</li><li>Transformer の中で、同じ文章の単語どうしの関係を計算するのが Self-Attention</li></ul>
+  <h2>試験での出され方</h2>
+  <p>仕組みの説明から、どのモデルかを選ぶ問題が考えられます。「得意なデータ」と「仕組みのキーワード」をセットで覚えておきましょう。</p>
+  <h2>それぞれの用語</h2>
+  <ul class="term-list"><li><a href="../terms/0032.html">CNN（畳み込みニューラルネットワーク）</a><p>画像の小さな範囲ごとに特徴をとらえる「畳み込み」を使うネットワーク。画像の認識（コンピュータビジョン）が得意。</p></li><li><a href="../terms/0033.html">RNN（再帰型ニューラルネットワーク）</a><p>前の時点の情報を次に引き継ぎながら処理するネットワーク。文章や音声などの順番のあるデータ（シーケンスデータ）を扱う。</p></li><li><a href="../terms/0050.html">Transformer</a><p>Attention を中心にした、文章などを処理するモデルの仕組み。並列に計算でき、遠く離れた言葉の関係（長距離依存）もとらえやすい。今の LLM の土台。</p></li></ul>
+  <div class="cta-row">
+    <a class="btn primary" href="../index.html#quiz"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="14" height="14" rx="2"/><path d="M7 2h12a2 2 0 0 1 2 2v12"/></svg>4択クイズで確かめる</a>
+    <a class="btn" href="../index.html#card">カードで練習</a>
+  </div>
+  
+  <h2>ほかの比べる用語</h2>
+  <ul class="b-links inline"><li><a href="ai-ml-dl.html">AI・機械学習・ディープラーニングの違い</a></li><li><a href="learning-types.html">教師あり学習・教師なし学習・強化学習の違い</a></li><li><a href="classification-regression.html">分類と回帰の違い</a></li><li><a href="transfer-finetuning.html">転移学習とファインチューニングの違い</a></li><li><a href="gan-vae-diffusion.html">GAN・VAE・拡散モデルの違い</a></li><li><a href="rag-finetuning.html">RAGとファインチューニングの違い</a></li><li><a href="temperature-top-p.html">TemperatureとTop-pの違い</a></li><li><a href="zero-shot-few-shot.html">Zero-ShotとFew-Shotプロンプティングの違い</a></li><li><a href="workflow-autonomous-agent.html">ワークフロー型エージェントと自律型エージェントの違い</a></li><li><a href="function-calling-mcp-a2a.html">Function Calling・MCP・A2Aの違い</a></li><li><a href="anonymized-pseudonymized.html">匿名加工情報と仮名加工情報の違い</a></li><li><a href="moral-rights-copyright.html">著作者人格権と複製権・翻案権の違い</a></li><li><a href="echo-chamber-filter-bubble.html">エコーチェンバーとフィルターバブルの違い</a></li><li><a href="shadow-ai-shadow-it.html">シャドーAIとシャドーITの違い</a></li></ul>
+</main>
+
+<footer class="site-foot">
+  <nav aria-label="フッター">
+    <a href="https://yogo-drill.com/">用語ドリル（ほかの資格のサイト）</a>
+    <a href="../terms/index.html">用語一覧</a>
+    <a href="../about.html">運営者情報</a>
+    <a href="../privacy.html">プライバシーポリシー・免責事項</a>
+  </nav>
+  <p>姉妹サイト: <a href="https://ip.yogo-drill.com/">ITパスポート用語ドリル</a>／<a href="https://fe.yogo-drill.com/">FE用語ドリル</a></p>
+  <p>生成AIパスポートは、一般社団法人生成AI活用普及協会（GUGA）が実施する試験です。当サイトは、試験の実施団体とは関係のない個人の学習サイトです。</p>
+  <p>© 2026 Yuki-fe</p>
+</footer>
+
+</body>
+</html>
