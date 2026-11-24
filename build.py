@@ -233,6 +233,7 @@ def build_home():
   </div>
   <aside class="hero-progress" aria-labelledby="prog-h">
     <h2 id="prog-h">あなたの進み具合</h2>
+    <div class="rev-plan" id="revPlan" hidden></div>
     <p class="hero-progress-sub">分野を押すと、その分野だけで学習します</p>
     <div class="fields" id="fields"></div>
     <p class="save-note">進み具合はこのブラウザに保存されます。<button id="reset" type="button">リセット</button></p>
@@ -252,7 +253,7 @@ def build_home():
 
 <section class="features" aria-labelledby="feat-h">
   <h2 id="feat-h" class="sec-title">できること</h2>
-  <div class="feat-grid"><a class="feat" href="#study">{icon("cards")}<b>単語帳とクイズ</b><span>{len(terms)}語をカード・4択・書いて答えるで。間違えた用語だけを復習できます。</span><em>学習を始める →</em></a><a class="feat" href="test.html">{icon("target")}<b>ミニテスト</b><span>5つの章から{n_test}問。章ごとの正答率がわかる。</span><em>挑戦する →</em></a><a class="feat" href="abbr.html">{icon("type")}<b>略語クイズ</b><span>LLM・RAG・MCP…略語{len(ABBRS)}語のクイズと早見表。</span><em>覚える →</em></a><a class="feat" href="typing.html">{icon("keyboard")}<b>用語タイピング</b><span>用語と意味を打って、手で覚えます。制限時間は1分・2分・3分から。</span><em>タイピングする →</em></a><a class="feat" href="terms/index.html">{icon("list")}<b>用語一覧</b><span>分野・小分類ごとに全部の用語を一覧で。1語ずつ解説ページがあります。</span><em>一覧を見る →</em></a></div>
+  <div class="feat-grid"><a class="feat" href="#study">{icon("cards")}<b>単語帳とクイズ</b><span>{len(terms)}語をカード・4択・書いて答えるで。間違えた用語や忘れかけた用語を、日付で復習できます。</span><em>学習を始める →</em></a><a class="feat" href="test.html">{icon("target")}<b>ミニテスト</b><span>5つの章から{n_test}問。章ごとの正答率がわかる。</span><em>挑戦する →</em></a><a class="feat" href="abbr.html">{icon("type")}<b>略語クイズ</b><span>LLM・RAG・MCP…略語{len(ABBRS)}語のクイズと早見表。</span><em>覚える →</em></a><a class="feat" href="typing.html">{icon("keyboard")}<b>用語タイピング</b><span>用語と意味を打って、手で覚えます。制限時間は1分・2分・3分から。</span><em>タイピングする →</em></a><a class="feat" href="terms/index.html">{icon("list")}<b>用語一覧</b><span>分野・小分類ごとに全部の用語を一覧で。1語ずつ解説ページがあります。</span><em>一覧を見る →</em></a></div>
 </section>
 
 <section class="prose home-intro">
@@ -481,7 +482,7 @@ def build_index():
   {''.join(sections)}
   {faq_html([
       ("AIを初めて学びます。どの章から覚えればいいですか？", "<p>まず「AIの基礎と歴史」と「生成AI」の章で、機械学習・LLM・トークンのような土台の用語を覚えましょう。そのあと「AIエージェント」「リスク・倫理・ガバナンス」「実践と活用」へ進むと、話がつながって覚えやすくなります。ホームの「学習する」で章を選ぶと、その章だけで練習できます。</p>"),
-      ("意味を読んでもすぐ忘れてしまいます。", "<p>読むだけより、思い出す練習のほうが記憶に残ります。カードで用語を思い出し、4択や「書いて答える」で確かめ、間違えた用語は「復習」でくり返しましょう。<a href=\"../typing.html\">用語タイピング</a>で手を動かして覚える方法や、<a href=\"../test.html\">章別ミニテスト</a>で苦手な章を見つける方法もあります。</p>"),
+      ("意味を読んでもすぐ忘れてしまいます。", "<p>読むだけより、思い出す練習のほうが記憶に残ります。カードで用語を思い出し、4択や「書いて答える」で確かめ、間違えた用語は「今日の復習」でくり返しましょう。<a href=\"../typing.html\">用語タイピング</a>で手を動かして覚える方法や、<a href=\"../test.html\">章別ミニテスト</a>で苦手な章を見つける方法もあります。</p>"),
       ("似た用語の区別がつきません。", "<p>RAGとファインチューニング、匿名加工情報と仮名加工情報のように、似た用語は違いを言えるようにしておくことが大切です。<a href=\"../compare/index.html\">似た用語の違い</a>で表にして比べると、見分けるポイントがつかめます。用語ページの「似た用語との違い」もあわせて読んでください。</p>"),
       ("英語の略語が多くて覚えられません。", "<p>LLM・RAG・MCP・RLHF などの略語は、正式名を知ると意味を思い出しやすくなります。<a href=\"../abbr.html\">略語クイズと早見表</a>で、正式名と意味をセットで覚えましょう。</p>"),
       ("このサイトだけで合格できますか？", "<p>このサイトは用語の暗記が中心です。試験では、用語の意味だけでなく、場面に当てはめて考える問題も出ます。試験の実施団体が公開しているシラバスや、参考書もあわせて使うことをおすすめします。シラバスは毎年のように改訂されるので、受験の前に最新の版を確かめてください。</p>"),
@@ -506,7 +507,7 @@ def build_test():
     <ul>
       <li>1回{n}問（{mix}）。</li>
       <li>説明文を読んで、当てはまる用語をア〜エから選びます。答えはすべて解き終わってから表示します。</li>
-      <li>間違えた用語は、ホームの「復習」に入ります。</li>
+      <li>間違えた用語は、ホームの「今日の復習」に入ります。</li>
     </ul>
     <p>本番の試験は、オンラインで60分・60問です。どの章からもまんべんなく出るので、正答率の低い章から重点的に復習しましょう。</p>
     <p class="muted">このミニテストは用語の確認のためのもので、本番の問題の形や採点の方法とは異なります。</p>
